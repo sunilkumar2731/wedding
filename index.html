@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shanmuga Priya & Kirubanandham — Wedding Invitation</title>
+  <meta name="description" content="Join us as we celebrate the wedding of Shanmuga Priya & Kirubanandham on 29 May 2026 at Sri Subramaniya Sammy Thirukovil, Gudiyattam." />
+
+  <!-- Google Fonts: Cormorant Garamond (serif elegance), Montserrat (clean sans), Great Vibes (script) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       PARTICLE CANVAS — gold floating sparkles (rendered by JS)
+       ============================================================ -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       ============================================================ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-logo">SP <span class="nav-heart">♥</span> K</div>
+
+    <!-- Mobile hamburger button -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero"      class="nav-link">Home</a></li>
+      <li><a href="#couple"    class="nav-link">Couple</a></li>
+      <li><a href="#timeline"  class="nav-link">Story</a></li>
+      <li><a href="#events"    class="nav-link">Events</a></li>
+      <li><a href="#countdown" class="nav-link">Countdown</a></li>
+      <li><a href="#gallery"   class="nav-link">Gallery</a></li>
+      <li><a href="#venue"     class="nav-link">Venue</a></li>
+      <li><a href="#rsvp"      class="nav-link">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       SECTION 1 — HERO
+       ============================================================ -->
+  <section id="hero" class="hero">
+
+    <!-- Decorative gold corner borders -->
+    <div class="hero-ornament hero-ornament--tl"></div>
+    <div class="hero-ornament hero-ornament--tr"></div>
+    <div class="hero-ornament hero-ornament--bl"></div>
+    <div class="hero-ornament hero-ornament--br"></div>
+
+    <!-- Couple hero photo (replace src for your real photo) -->
+    <div class="hero-photo-frame animate-fade-up" style="--delay:0.1s">
+      <img
+        src="images/hero_couple.png"
+        alt="Shanmuga Priya and Kirubanandham — Wedding Couple"
+        class="hero-couple-img"
+      />
+    </div>
+
+    <!-- Hero text content -->
+    <div class="hero-content">
+      <p class="hero-pre-title animate-fade-up" style="--delay:0.3s">Together With Their Families</p>
+
+      <h1 class="hero-names animate-fade-up" style="--delay:0.5s">
+        Shanmuga Priya <span class="hero-amp">&amp;</span> Kirubanandham
+      </h1>
+
+      <div class="hero-divider animate-fade-up" style="--delay:0.7s">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <p class="hero-invite animate-fade-up" style="--delay:0.85s">
+        Request the honour of your presence<br />at the celebration of their marriage
+      </p>
+
+      <p class="hero-date animate-fade-up" style="--delay:1.0s">Friday, the Twenty-Ninth of May</p>
+      <p class="hero-year animate-fade-up" style="--delay:1.1s">Two Thousand and Twenty-Six</p>
+
+      <p class="hero-venue animate-fade-up" style="--delay:1.2s">
+        <span class="venue-icon">📍</span> Sri Subramaniya Sammy Thirukovil, Gudiyattam
+      </p>
+
+      <a href="#rsvp" class="btn-save-date animate-fade-up" style="--delay:1.4s" id="save-date-btn">
+        <span class="btn-text">Save the Date</span>
+        <span class="btn-shimmer"></span>
+      </a>
+    </div>
+
+    <!-- Scroll-down arrow -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2 — COUPLE INTRODUCTION
+       ============================================================ -->
+  <section id="couple" class="section couple-section">
+    <div class="section-header">
+      <p class="section-pre">Meet the</p>
+      <h2 class="section-title">Happy Couple</h2>
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+    </div>
+
+    <div class="couple-cards">
+
+      <!-- ── BRIDE card ── -->
+      <div class="couple-card glass-card reveal" id="bride-card">
+        <div class="couple-photo-wrap">
+          <!-- Replace src with bride's real photo -->
+          <img src="images/bride.png" alt="Shanmuga Priya — The Bride" />
+        </div>
+        <div class="couple-card-body">
+          <p class="couple-role">The Bride</p>
+          <h3 class="couple-name">Shanmuga Priya</h3>
+          <div class="couple-divider"></div>
+          <p class="couple-desc">
+            A graceful soul with a heart full of love, Shanmuga Priya fills every room with
+            warmth and joy. A devoted daughter and a wonderful friend, her smile lights up
+            the world around her. She is the love that Kirubanandham had always dreamed of,
+            and together they are a perfect pair.
+          </p>
+        </div>
+      </div>
+
+      <!-- Center heart ornament -->
+      <div class="couple-center-ornament">
+        <div class="ornament-ring">
+          <span class="ornament-heart">♥</span>
+        </div>
+      </div>
+
+      <!-- ── GROOM card ── -->
+      <div class="couple-card glass-card reveal" id="groom-card">
+        <div class="couple-photo-wrap">
+          <!-- Replace src with groom's real photo -->
+          <img src="images/groom.png" alt="Kirubanandham — The Groom" />
+        </div>
+        <div class="couple-card-body">
+          <p class="couple-role">The Groom</p>
+          <h3 class="couple-name">Kirubanandham</h3>
+          <div class="couple-divider"></div>
+          <p class="couple-desc">
+            Sincere, strong, and full of warmth, Kirubanandham carries a heart of gold in
+            everything he does. A caring son and a loyal friend, he found in Shanmuga Priya
+            the love that completes him. His devotion and love for her are as deep and endless
+            as the ocean.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3 — LOVE STORY TIMELINE
+       ============================================================ -->
+  <section id="timeline" class="section timeline-section">
+    <div class="section-header">
+      <p class="section-pre">How it all began</p>
+      <h2 class="section-title">Our Love Story</h2>
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item timeline-left reveal">
+        <div class="timeline-content glass-card">
+          <div class="timeline-icon">🌟</div>
+          <p class="timeline-date">The Beginning</p>
+          <h3 class="timeline-title">Families United</h3>
+          <p class="timeline-text">
+            Destiny had its own beautiful plan. Two families, two hearts, brought together
+            by the grace of God. Shanmuga Priya and Kirubanandham were introduced through
+            their families — and from the very first moment, something extraordinary sparked.
+          </p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item timeline-right reveal">
+        <div class="timeline-content glass-card">
+          <div class="timeline-icon">🌸</div>
+          <p class="timeline-date">First Meeting</p>
+          <h3 class="timeline-title">When Eyes Met</h3>
+          <p class="timeline-text">
+            Their first meeting was simple, yet unforgettable. Gentle words, warm smiles,
+            and a quiet understanding between two souls. In that moment, they both felt
+            something they couldn't quite explain — but never wanted to forget.
+          </p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item timeline-left reveal">
+        <div class="timeline-content glass-card">
+          <div class="timeline-icon">💞</div>
+          <p class="timeline-date">Growing Together</p>
+          <h3 class="timeline-title">A Bond That Grew</h3>
+          <p class="timeline-text">
+            With every conversation, every shared laugh, and every quiet moment, their bond
+            grew deeper. They discovered in each other a best friend, a confidant, and a
+            partner for every season of life.
+          </p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item timeline-right reveal">
+        <div class="timeline-content glass-card">
+          <div class="timeline-icon">💍</div>
+          <p class="timeline-date">The Decision</p>
+          <h3 class="timeline-title">Yes, Forever</h3>
+          <p class="timeline-text">
+            With blessings from both families and joy in their hearts, Kirubanandham and
+            Shanmuga Priya said yes to a lifetime together. It was not just a decision —
+            it was a promise written in the stars.
+          </p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item timeline-left reveal">
+        <div class="timeline-content glass-card">
+          <div class="timeline-icon">💒</div>
+          <p class="timeline-date">29 May 2026</p>
+          <h3 class="timeline-title">The Wedding Day</h3>
+          <p class="timeline-text">
+            And now, surrounded by everyone they love, Shanmuga Priya and Kirubanandham
+            begin the most beautiful chapter of their lives — at 4:30 AM, as the auspicious
+            hour blesses their union at Sri Subramaniya Sammy Thirukovil, Gudiyattam.
+          </p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <!-- Vertical center line -->
+      <div class="timeline-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4 — WEDDING EVENTS
+       ============================================================ -->
+  <section id="events" class="section events-section">
+    <div class="section-header">
+      <p class="section-pre">Mark Your Calendar</p>
+      <h2 class="section-title">Wedding Events</h2>
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+    </div>
+
+    <div class="events-grid">
+
+      <!-- Wedding Ceremony (featured) -->
+      <div class="event-card event-card--featured glass-card reveal" id="event-wedding">
+        <div class="event-featured-badge">✨ Muhurtham</div>
+        <div class="event-icon-wrap"><span class="event-icon">💒</span></div>
+        <h3 class="event-title">Wedding Ceremony</h3>
+        <div class="event-detail"><span class="event-label">Date</span><span>Friday, 29 May 2026</span></div>
+        <div class="event-detail"><span class="event-label">Time</span><span>4:30 AM – 5:30 AM</span></div>
+        <div class="event-detail"><span class="event-label">Venue</span><span>Sri Subramaniya Sammy Thirukovil</span></div>
+        <div class="event-detail"><span class="event-label">Location</span><span>Gudiyattam</span></div>
+      </div>
+
+      <!-- Reception 1 -->
+      <div class="event-card glass-card reveal" id="event-reception1">
+        <div class="event-icon-wrap"><span class="event-icon">🥂</span></div>
+        <h3 class="event-title">Reception — Gudiyattam</h3>
+        <div class="event-detail"><span class="event-label">Date</span><span>Sunday, 31 May 2026</span></div>
+        <div class="event-detail"><span class="event-label">Time</span><span>11:30 AM Onwards</span></div>
+        <div class="event-detail"><span class="event-label">Venue</span><span>A.P.M Mahal</span></div>
+        <div class="event-detail"><span class="event-label">Location</span><span>Gudiyattam</span></div>
+      </div>
+
+      <!-- Reception 2 -->
+      <div class="event-card glass-card reveal" id="event-reception2">
+        <div class="event-icon-wrap"><span class="event-icon">🎉</span></div>
+        <h3 class="event-title">Reception — Kaveripattinam</h3>
+        <div class="event-detail"><span class="event-label">Date</span><span>Sunday, 07 June 2026</span></div>
+        <div class="event-detail"><span class="event-label">Time</span><span>11:30 AM Onwards</span></div>
+        <div class="event-detail"><span class="event-label">Venue</span><span>Thuluva Velalalar Mahal</span></div>
+        <div class="event-detail"><span class="event-label">Location</span><span>Kaveripattinam</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5 — COUNTDOWN TIMER
+       ============================================================ -->
+  <section id="countdown" class="section countdown-section">
+    <div class="countdown-bg-text">FOREVER</div>
+
+    <div class="section-header">
+      <p class="section-pre" style="color:var(--gold-light)">The Big Day Is Coming</p>
+      <h2 class="section-title" style="color:#fff;">Counting Down</h2>
+      <div class="section-divider">
+        <span class="divider-line" style="background:rgba(255,255,255,0.25)"></span>
+        <span class="divider-diamond" style="color:var(--gold)">◆</span>
+        <span class="divider-line" style="background:rgba(255,255,255,0.25)"></span>
+      </div>
+    </div>
+
+    <div class="countdown-timer" id="countdown-timer">
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-days">00</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-hours">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-minutes">00</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-seconds">00</div>
+        <div class="countdown-label">Seconds</div>
+      </div>
+    </div>
+
+    <p class="countdown-subtext">Until the Auspicious Muhurtham — 29 May 2026 at 4:30 AM</p>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6 — PHOTO GALLERY
+       ============================================================ -->
+  <section id="gallery" class="section gallery-section">
+    <div class="section-header">
+      <p class="section-pre">Captured Moments</p>
+      <h2 class="section-title">Photo Gallery</h2>
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+    </div>
+
+    <!-- Gallery grid — 7 real couple photos -->
+    <div class="gallery-grid gallery-grid--7">
+
+      <!-- Photo 1: Beach sunset — intimate moment (wide) -->
+      <div class="gallery-item gallery-item--wide reveal" id="gallery-item-1">
+        <img src="images/gallery1.png" alt="Beach sunset intimate moment" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-icon">🔍</span>
+          <span class="gallery-caption">A Moment at Sunset</span>
+        </div>
+      </div>
+
+      <!-- Photo 2: Café night — smiling together -->
+      <div class="gallery-item reveal" id="gallery-item-2">
+        <img src="images/gallery2.jpg" alt="Couple smiling at café night" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-icon">🔍</span>
+          <span class="gallery-caption">Our Happy Place</span>
+        </div>
+      </div>
+
+      <!-- Photo 3: Lamppost night — playful -->
+      <div class="gallery-item reveal" id="gallery-item-3">
+        <img src="images/gallery3.png" alt="Playful moment at lamppost" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-icon">🔍</span>
+          <span class="gallery-caption">Night Full of Laughs</span>
+        </div>
+      </div>
+
+      <!-- Photo 4: Temple — traditional attire sitting -->
+      <div class="gallery-item reveal" id="gallery-item-4">
+        <img src="images/gallery4.jpg" alt="Temple traditional attire" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-icon">🔍</span>
+          <span class="gallery-caption">Blessed by the Divine</span>
+        </div>
+      </div>
+
+      <!-- Photo 5: Temple — romantic railing -->
+      <div class="gallery-item reveal" id="gallery-item-5">
+        <img src="images/gallery5.jpg" alt="Romantic moment at temple railing" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-icon">🔍</span>
+          <span class="gallery-caption">Written in the Stars</span>
+        </div>
+      </div>
+
+      <!-- Photo 6: Royal Enfield — cool couple (wide) -->
+      <div class="gallery-item gallery-item--wide reveal" id="gallery-item-6">
+        <img src="images/gallery6.jpg" alt="Couple with Royal Enfield motorcycle" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-icon">🔍</span>
+          <span class="gallery-caption">Riding Into Forever</span>
+        </div>
+      </div>
+
+      <!-- Photo 7: Temple walk — holding hands -->
+      <div class="gallery-item reveal" id="gallery-item-7">
+        <img src="images/gallery7.jpg" alt="Walking together at temple" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-icon">🔍</span>
+          <span class="gallery-caption">Walking Together</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Lightbox modal for full-screen view -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">✕</button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 7 — VENUE
+       ============================================================ -->
+  <section id="venue" class="section venue-section">
+    <div class="section-header">
+      <p class="section-pre">Find Your Way</p>
+      <h2 class="section-title">The Venue</h2>
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+    </div>
+
+    <div class="venue-content">
+
+      <!-- Venue info card -->
+      <div class="venue-info glass-card reveal" id="venue-info-card">
+        <div class="venue-name-block">
+          <h3 class="venue-name">Sri Subramaniya Sammy Thirukovil</h3>
+          <p class="venue-tagline">The Sacred Abode of the Auspicious Wedding</p>
+        </div>
+        <div class="venue-details">
+          <div class="venue-detail-item">
+            <span class="venue-detail-icon">📍</span>
+            <div>
+              <p class="venue-detail-label">Wedding Venue</p>
+              <p class="venue-detail-value">Sri Subramaniya Sammy Thirukovil, Gudiyattam</p>
+            </div>
+          </div>
+          <div class="venue-detail-item">
+            <span class="venue-detail-icon">🥂</span>
+            <div>
+              <p class="venue-detail-label">Reception 1</p>
+              <p class="venue-detail-value">A.P.M Mahal, Gudiyattam — 31 May 2026</p>
+            </div>
+          </div>
+          <div class="venue-detail-item">
+            <span class="venue-detail-icon">🎉</span>
+            <div>
+              <p class="venue-detail-label">Reception 2</p>
+              <p class="venue-detail-value">Thuluva Velalalar Mahal, Kaveripattinam — 07 Jun 2026</p>
+            </div>
+          </div>
+          <div class="venue-detail-item">
+            <span class="venue-detail-icon">🕐</span>
+            <div>
+              <p class="venue-detail-label">Muhurtham Time</p>
+              <p class="venue-detail-value">4:30 AM – 5:30 AM on 29 May 2026</p>
+            </div>
+          </div>
+        </div>
+        <a
+          href="https://maps.google.com/?q=Gudiyattam"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-directions"
+          id="directions-btn"
+        >
+          <span>Get Directions</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- Google Maps embed -->
+      <div class="venue-map-wrap reveal" id="venue-map-wrap">
+        <iframe
+          class="venue-map"
+          title="Wedding Venue — Gudiyattam, Tamil Nadu"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.123456789!2d78.8641!3d12.9588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad494a4d5d5555%3A0x1234567890abcdef!2sGudiyattam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1716000000000!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 8 — RSVP FORM
+       ============================================================ -->
+  <section id="rsvp" class="section rsvp-section">
+    <div class="section-header">
+      <p class="section-pre">You're Invited</p>
+      <h2 class="section-title">RSVP</h2>
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+      <p class="section-subtitle">Kindly respond by 20 May 2026</p>
+    </div>
+
+    <div class="rsvp-wrap">
+
+      <!-- The RSVP form -->
+      <form class="rsvp-form glass-card reveal" id="rsvp-form" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rsvp-name" class="form-label">Full Name *</label>
+            <input type="text" id="rsvp-name" name="name" class="form-input"
+                   placeholder="Your full name" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="rsvp-phone" class="form-label">Phone Number *</label>
+            <input type="tel" id="rsvp-phone" name="phone" class="form-input"
+                   placeholder="+1 (000) 000-0000" required autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rsvp-email" class="form-label">Email Address</label>
+            <input type="email" id="rsvp-email" name="email" class="form-input"
+                   placeholder="your@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="rsvp-guests" class="form-label">Number of Guests</label>
+            <select id="rsvp-guests" name="guests" class="form-input form-select">
+              <option value="1">1 — Just me</option>
+              <option value="2">2 — Myself + Partner</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5+">5+ Guests</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Will you attend? *</label>
+          <div class="attendance-options" id="attendance-options">
+            <label class="attendance-option">
+              <input type="radio" name="attendance" value="yes" id="attend-yes" required />
+              <span class="attendance-btn">
+                <span class="attendance-icon">✓</span>
+                <span>Joyfully Accepts</span>
+              </span>
+            </label>
+            <label class="attendance-option">
+              <input type="radio" name="attendance" value="no" id="attend-no" />
+              <span class="attendance-btn">
+                <span class="attendance-icon">✗</span>
+                <span>Regretfully Declines</span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Which events will you attend?</label>
+          <div class="event-check-group">
+            <label class="event-check">
+              <input type="checkbox" name="events" value="wedding" id="check-wedding" />
+              <span>💒 Wedding Ceremony — 29 May</span>
+            </label>
+            <label class="event-check">
+              <input type="checkbox" name="events" value="reception1" id="check-reception1" />
+              <span>🥂 Reception at Gudiyattam — 31 May</span>
+            </label>
+            <label class="event-check">
+              <input type="checkbox" name="events" value="reception2" id="check-reception2" />
+              <span>🎉 Reception at Kaveripattinam — 07 Jun</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="rsvp-dietary" class="form-label">Dietary Requirements</label>
+          <input type="text" id="rsvp-dietary" name="dietary" class="form-input"
+                 placeholder="Vegetarian, vegan, allergies, etc." />
+        </div>
+
+        <div class="form-group">
+          <label for="rsvp-message" class="form-label">Leave a Message for the Couple</label>
+          <textarea id="rsvp-message" name="message" class="form-input form-textarea"
+                    placeholder="Share your wishes for Shanmuga Priya &amp; Kirubanandham…" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn-rsvp" id="rsvp-submit">
+          <span class="btn-text" id="rsvp-btn-text">Send My RSVP</span>
+          <span class="btn-shimmer"></span>
+        </button>
+
+      </form>
+
+      <!-- Success message — shown after submission -->
+      <div class="rsvp-success" id="rsvp-success" style="display:none;" aria-live="polite">
+        <div class="rsvp-success-inner glass-card">
+          <div class="success-icon">💌</div>
+          <h3>Thank You!</h3>
+          <p>Your RSVP has been received.<br />We can't wait to celebrate with you!</p>
+          <p class="success-names">— Shanmuga Priya &amp; Kirubanandham</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 9 — FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer-ornament">
+      <span class="divider-line"></span>
+      <span class="footer-heart">♥</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <h2 class="footer-names">Shanmuga Priya &amp; Kirubanandham</h2>
+    <p class="footer-date">29 · 05 · 2026</p>
+
+    <p class="footer-families">
+      Bride's Family &nbsp;·&nbsp; Groom's Family
+    </p>
+
+    <blockquote class="footer-thank">
+      "Two are better than one, because they have a good return for their labor.<br />
+      If either of them falls down, one can help the other up."<br />
+      <em>— Ecclesiastes 4:9–10</em>
+    </blockquote>
+
+    <div class="footer-links">
+      <a href="mailto:wedding@shanmugapriya-kirubanandham.com" class="footer-link" id="footer-email">
+        📧 Email Us
+      </a>
+      <a href="tel:+919999999999" class="footer-link" id="footer-phone">
+        📞 Call Us
+      </a>
+      <a href="#hero" class="footer-link" id="footer-top">
+        ↑ Back to Top
+      </a>
+    </div>
+
+    <p class="footer-copy">
+      Made with ♥ for Shanmuga Priya &amp; Kirubanandham &nbsp;|&nbsp; © 2026 All Rights Reserved
+    </p>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
